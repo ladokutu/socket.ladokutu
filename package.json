@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-	"build": "netlify deploy --prod"
+    "build": "netlify deploy --prod"
   },
   "author": "Djon",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "express": "^4.18.2",
     "nodemon": "^3.0.3",
     "save-dev": "^0.0.1-security",
+    "serverless-http": "^3.2.0",
     "socket.io": "^4.7.4"
   }
 }

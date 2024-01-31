@@ -3,12 +3,12 @@ const app = express();
 const cors = require('cors');
 const http = require('http');
 const serverless = require('serverless-http');
-//const server = http.createServer(app);
+const server = http.createServer(app);
 const { Server } = require("socket.io");
 const port = process.env.PORT || 8000;
 const list_users = [];
 const io = new Server(
-	serverless,{
+	server,{
 	  cors: {
 		origin: ["https://core.ladokutu.info","https://node.ladokutu.info","https://ladokutu.info","https://apps.tatamulia.co.id:7443","http://localhost:5000"],
 		methods: ["GET", "POST"]
@@ -51,6 +51,7 @@ io.on('connection', (socket) => {
 });	
 
 
-serverless.listen(port, function() {
+server.listen(port, function() {
     console.log('App running on *: ' + port);
 });
+module.exports.handler = serverless(server);
