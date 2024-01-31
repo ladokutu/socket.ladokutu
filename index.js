@@ -50,6 +50,6 @@ io.on('connection', (socket) => {
 	
 });	
 
-
-runn = server.listen(port)
-module.exports.handler = serverless(runn);
+server.listen(port, function() {
+    console.log('App running on *: ' + port);
+});
