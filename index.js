@@ -50,9 +50,6 @@ io.on('connection', (socket) => {
 	
 });	
 
-app.use('/.netlify/functions/api', io);
-/*server.listen(port, function() {
-    console.log('App running on *: ' + port);
-});
-*/
-module.exports.handler = serverless(app);
+
+runn = server.listen(port)
+module.exports.handler = serverless(runn);
