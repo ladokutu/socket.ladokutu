@@ -26,7 +26,7 @@ io.on('connection', (socket) => {
 		if (socket.id) { 
 			console.log('Connected',socket.id)
 		}
-		
+		console.log(list_users)
 	});
 	
 	
