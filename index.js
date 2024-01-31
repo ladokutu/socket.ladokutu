@@ -10,7 +10,7 @@ const list_users = [];
 const io = new Server(
 	server,{
 	  cors: {
-		origin: ["https://core.ladokutu.info","https://node.ladokutu.info","https://ladokutu.info","https://apps.tatamulia.co.id:7443","http://localhost:5000"],
+		origin: ["https://core.ladokutu.info","https://node.ladokutu.info","https://ladokutu.info","https://apps.tatamulia.co.id:7443","http://localhost:5000","https://socket-test-client.netlify.app"],
 		methods: ["GET", "POST"]
 	  }
 	});
