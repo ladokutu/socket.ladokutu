@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-	"build": "node server.js"
+	"build": "netlify deploy --prod"
   },
   "author": "Djon",
   "license": "ISC",
